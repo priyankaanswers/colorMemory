@@ -1,0 +1,168 @@
+.selected {
+    background-color:black;
+    color:white;
+    font-weight:bold;
+}
+.ng-scope .c1 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour1.gif');
+}
+.ng-scope .c2 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour2.gif');
+}
+.ng-scope .c3 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour3.gif');
+}
+.ng-scope .c4 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour4.gif');
+}
+.ng-scope .c5 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour5.gif');
+}
+.ng-scope .c6 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour6.gif');
+}
+.ng-scope .c7 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour7.gif');
+}
+.ng-scope .c8 {
+    transform:rotateY(180deg);
+    background-image: url('../images/colour8.gif');
+}
+.outer-container {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 720px;
+    height: 576px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    background: #2980b9;
+}
+.game {
+    display: inline-flex;
+}
+.cards-container {
+    margin-top: 30px;
+    display: inline-block;
+}
+.game.controls-container {
+    width: 25%;
+    display: block;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    height: 100%;
+    background: #fff;
+    border: 3px solid #2980b9;
+}
+.content.ng-binding {
+    height: 200px;
+    width: 100%;
+}
+.logo, img {
+    max-width: 100%;
+    margin-top: 40px;
+}   
+li {
+    list-style: none;
+    display: inline-block;
+}   
+.cards {
+    height: 127px;
+    width: 127px;
+    background-image: url('../images/card_bg.gif');
+    background-repeat: no-repeat;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    background-size: cover;
+    border: 4px solid #2c3e50;
+}
+body .display{
+    background: none !important;
+}
+.content {
+    height: auto`;
+    width: 100%;
+}
+.game h4 {
+    margin-top: 40px;
+}
+.highlight {
+    border: 4px solid #f1c40f;
+    width: 127px;
+    height: 127px;
+}
+.modal-container {
+    width: 100%;
+    position:absolute;
+    height: 100%;
+    background: rgba(1,1,1,0.3);
+    top:0;
+    z-index: 111;
+}
+.modal-content {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    vertical-align: middle;
+    display: block;
+    top: 100px;
+    background: #2980b9;
+    color: #fff;
+}
+.hidden {
+    display: none !important;
+}
+.ip {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+    border: none;
+}
+input.ip {
+    color: #333;  
+}
+.score.ng-binding {
+    font-size: 2em;
+    line-height: .8em;
+}
+.game .content span.ng-binding {
+    text-transform: capitalize;
+}
+.restart button {
+    background: #2980b9;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    width: 100%;
+    margin-top: 40px;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+.modal-content img {
+    max-width: 100px;
+    margin-top: 5px;
+}
+.modal-content button {
+    padding: 7px;
+    background: #fff;
+    border: none;
+    color: #2980b9;
+    text-transform: uppercase;
+    font-weight: bold;
+}

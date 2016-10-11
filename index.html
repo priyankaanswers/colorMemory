@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen"/>
+    <link href="css/style.css" rel="stylesheet" media="screen"/>
+    <!-- Google Font : Rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body ng-app="colorapp" ng-controller="colorCtrl" style="overflow:hidden;" ng-cloak>
+    
+    <div ng-class="{'hidden': hide,'modal-container':true}">
+        <div class="modal-content">
+            <div class="col-md-12" align="center" ng-show="over">
+             <h3 class="ip" align="center">GAME OVER</h3> 
+             <img ng-click="replay()" style="width:100px;height:100px;"src="images/replay.png">
+            
+             <h3 class="ip" align="center">OR</h3> 
+             <input align="center" class="ip" type="text" ng-model="username" placeholder="UserName">
+             <input align="center" placeholder="Email" class="ip" type="email" ng-model="email">
+             <button align="center" style="top:10px;height:30px;" class="col-md-12"ng-click="save()">Submit</button>
+            </div> 
+            <div class="rank" ng-show='rankdiv' align="center">
+                <h4 align="center">Your Rank: {{rank}}</h4>
+                <img ng-click="replay()" style="width:100px;height:100px;"src="images/replay.png">
+            </div>
+        </div>
+    </div>
+
+    <div align="center" class="outer-container">
+        <div class="game-container" align="left">
+            <div class="game cards-container col-md-9" arrow-selector >
+                <li ng-repeat="card in cards  " >
+                <div  ng-class="{cards:true,display:card.complete,highlight:($index == selected),{{ card.color }}:($index == curr1) || ($index==curr2)}">
+                                </div>
+                </li>
+            </div>
+            <div class="game controls-container col-md-3">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="content" align="center">
+                    <h4>Current Score</h4>
+                        <div class="score">{{ score }}</div>
+                    <h4>High Score</h4>
+                    <li ng-repeat="user in users | orderBy:'-score' | limitTo:5" style="display: block;">
+                    <span>{{ user.name}} <strong>-</strong></span> <span><strong>{{user.score}}</strong></span></li>
+                </div>
+                <div class="restart">
+                    <button ng-click="replay()">Restart</button>
+                </div>  
+            </div>
+        </div>
+     </div>
+    
+    <!-- Scripts -->    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+</body>
+</html>
