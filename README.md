@@ -33,6 +33,6 @@ Tips to play the Game
 
 ####################################
 
-Hosted Live on Github Pages
+Hosted Live on Github Pages | Working Demo
 
-URL - 
+Demo URL - https://priyankaanswers.github.io/colorMemory/
